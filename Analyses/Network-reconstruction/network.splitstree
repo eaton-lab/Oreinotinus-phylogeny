@@ -1,0 +1,6 @@
+begin SplitsTree;
+LOAD FILE=NANUQdist_a1e-5b0.95_alpha1e-05_beta0.95.nex
+UPDATE
+EXPORTGRAPHICS FORMAT=SVG FILE=network_march2021.svg
+QUIT
+end;
