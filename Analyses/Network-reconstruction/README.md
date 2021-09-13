@@ -1,8 +1,8 @@
 The scripts in this analysis are in three different files:
 
-## 1_Reconstruct_trees_treeslider.ipynb
-## 2_NANUQ_execution.R
-## 3_splitstree_execution.sh
+- 1_Reconstruct_trees_treeslider.ipynb
+- 2_NANUQ_execution.R
+- 3_splitstree_execution.sh
 
 They should be executed in that order.
 
