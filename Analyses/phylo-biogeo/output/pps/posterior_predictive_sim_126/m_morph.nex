@@ -1,0 +1,50 @@
+#NEXUS
+
+Begin data;
+Dimensions ntax=41 nchar=1;
+Format datatype=Standard symbols="0123" missing=? gap=-;
+Matrix
+acutifolium   2
+alpinum   3
+ayavacense   0
+blandum   2
+caudatum   1
+ciliatum   0
+costaricanum   3
+dentatum   0
+discolor   1
+disjunctum   2
+dumatorum   3
+fuscum   1
+hallii   3
+hartwegii   2
+hirsutum   1
+jamesonii   3
+jucundum   2
+lasiophyllum   1
+lautum   3
+loeseneri   3
+membranaceum   3
+microcarpum   2
+microphyllum   0
+newsp.1   3
+newsp.2   0
+obtusatum   0
+pichinchense   3
+reticulatum   3
+seemenii   3
+stellato-tomentosum   2
+stenocalyx   3
+subsessile   0
+sulcatum   2
+tiliaefolium   3
+tinoides_1   3
+tinoides_2   3
+toronis   1
+triphyllum   3
+triphyllum_new   0
+undulatum   3
+villosum   3
+;
+End;
+
