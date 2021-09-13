@@ -1,3 +1,5 @@
+## NANUQ networks reconstructions (part 2) - Running NANUQ
+
 #install library in console where NANUQ algoritm is
 # install.packages("MSCquartets")
 
@@ -16,4 +18,5 @@ nanuqDist = NANUQ("raxmlTrees_window2mb_msnip10_mcov9_IMAPED_100biggestScaff_300
 
 #After this point it is needed to process the outfile in Splitstree [https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/algorithms-in-bioinformatics/software/splitstree/]
 #Check script = network.splitstree
-#Run splittree using 2.execute_splitstree.sh
+#Run splittree using 3_splitstree_execution.sh
+
