@@ -54,7 +54,8 @@ sim_files = list.files( sim_fp )
 sim_morph = list()
 sim_bg = list()
 k = 1
-for (i in 1:length(sim_files)) {
+
+for (i in 2:length(sim_files)) {
     sim_fn = sim_files[[i]]
     sim_tok = strsplit(sim_fn, "_")[[1]]
     sim_id = as.numeric(sim_tok[length(sim_tok)])
@@ -143,7 +144,6 @@ p = p + ggtitle("Num. regions with 3+ leaf types")
 p = p + theme(panel.background = element_rect(fill = "white", colour = "grey50"),
               plot.title = element_text(hjust = 0.5))
 p3 = p
-
 
 pg = plot_grid(p2, p3, align="hv")
 pg
