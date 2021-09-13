@@ -146,7 +146,6 @@ p = p + theme(panel.background = element_rect(fill = "white", colour = "grey50")
 p3 = p
 
 pg = plot_grid(p2, p3, align="hv")
-pg
 
 pdf(plot_fn, height=4, width=8)
 print(pg)
