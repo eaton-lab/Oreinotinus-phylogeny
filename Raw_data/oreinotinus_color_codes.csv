@@ -1,43 +1,43 @@
-Species,Region,RegionShort,Color,Abrev.,Pubescent,Big,RegionUnique,ColorRegionUnique,ActualColor,RegionDescr,ShortRegionName
-acutifolium,mex_w,Oaxaca,#87cdde,acut.,0,,11th_area,#00966D,,New region west of Mexico,W.Mex
-alpinum,jamaica,Jam,#ffd42a,alpi.,0,,bol,#d4ff2a,,South of Peru and Bolivia,S.Peru/Bol
-ayavacense,peru,S.Ecu/N.Peru,#ff6600,ayav.,0,,central,#d35f5f,,Chiapas and Central America,Chiapas/CA
-blandum,central,Chiapas/CA,#d35f5f,blan.,0,,col_e,#5555ff,,East of Colombia and Venezuela,E.Col/Ven
-caudatum,mex_e,E.Mex,#a8ffaa,caud.,0,,col_w,#66ff00,,West of Colombia,W.Col
-ciliatum,mex_e,E.Mex,#a8ffaa,cili.,0,,costa,#501644,,Costa Rica,CR
-costaricanum,costa,CR,#501644,cost.,0,,ecu_n,#de87cd,,South Columbia and North of Ecuador,S.Col/N.Ecu
-dentatum,out,out,#a09999,dent.,0,,jamaica,#ffd42a,,Jamaica,Jam
-discolor,central,Chiapas/CA,#d35f5f,disc.,1,,mex_e,#a8ffaa,,East of Mexico,E.Mex
-disjunctum,central,Chiapas/CA,#d35f5f,disj.,1,,mex_w,#87cdde,,Oaxaca,Oaxaca
-dumatorum,bol,S.Peru/Bol,#d4ff2a,duma.,0,,out,#a09999,,Outgroup (Dentatum),out
-elatum,out,out,#a09999,elat.,0,,peru,#ff6600,,South of Ecuador and North of Peru,S.Ecu/N.Peru
-fuscum,mex_w,Oaxaca,#87cdde,fusc.,0,,,,,,
-hallii,ecu_n,S.Col/N.Ecu,#de87cd,hall.,0,,,,,,
-hartwegii,central,Chiapas/CA,#d35f5f,hart.,0,,,,,,
-hirsutum,mex_e,E.Mex,#a8ffaa,hirs.,0,,,,,,
-jamesonii,ecu_n,S.Col/N.Ecu,#de87cd,jame.,1,,,,,,
-jucundum,central,Chiapas/CA,#d35f5f,jucu.,1,,,,,,
-lasiophyllum,col_e,E.Col/Ven,#5555ff,lasi.,1,,,,,,
-lautum,central,Chiapas/CA,#d35f5f,laut.,0,,,,,,
-loeseneri,11th_area,W.Mex,#00966D,loes.,1,,,,,,
-membranaceum,mex_w,Oaxaca,#87cdde,memb.,0,,,,,,
-microcarpum,mex_e,E.Mex,#a8ffaa,microc.,1,,,,,,
-microphyllum,mex_w,Oaxaca,#87cdde,microp.,0,,,,,,
-new_sp_1,mex_w,Oaxaca,#87cdde,new1.,1,,,,,,
-new_sp_2,mex_w,Oaxaca,#87cdde,new2.,0,,,,,,
-obtusatum,central,Chiapas/CA,#d35f5f,obtu.,0,,,,,,
-pichinchense,ecu_n,S.Col/N.Ecu,#de87cd,pich.,1,,,,,,
-reticulatum,peru,S.Ecu/N.Peru,#ff6600,reti.,1,,,,,,
-seemenii,bol,S.Peru/Bol,#d4ff2a,seem.,0,,,,,,
-stellato-tomentosum,costa,CR,#501644,stel.,1,,,,,,
-stenocalyx,11th_area,W.Mex,#00966D,sten.,0,,,,,,
-subsessile,col_w,W.Col,#66ff00,subs.,0,,,,,,
-sulcatum,mex_w,Oaxaca,#87cdde,sulc.,1,,,,,,
-tiliaefolium,mex_e,E.Mex,#a8ffaa,tilia.,1,,,,,,
-tinoides_1,col_w,W.Col,#66ff00,tin1.,0,,,,,,
-tinoides_2,col_e,E.Col/Ven,#5555ff,tin2.,0,,,,,,
-toronis,peru,S.Ecu/N.Peru,#ff6600,tor.,0,,,,,,
-triphyllum,col_e,E.Col/Ven,#5555ff,tri1.,0,,,,,,
-triphyllum_new,peru,S.Ecu/N.Peru,#ff6600,tri2.,0,,,,,,
-undulatum,col_w,W.Col,#66ff00,undu.,1,,,,,,
-villosum,jamaica,Jam,#ffd42a,vill.,2,,,,,,
+Species,RegionShort,Color,Abrev.,Pubescent,,,RegionUnique,ColorRegionUnique,RegionDescription
+acutifolium,Oaxaca,#87cdde,acut.,0,,,W.Mex,#00966D,New region west of Mexico
+alpinum,Jam,#ffd42a,alpi.,0,,,S.Peru/Bol,#d4ff2a,South of Peru and Bolivia
+ayavacense,S.Ecu/N.Peru,#ff6600,ayav.,0,,,Chiapas/CA,#d35f5f,Chiapas and Central America
+blandum,Chiapas/CA,#d35f5f,blan.,0,,,E.Col/Ven,#5555ff,East of Colombia and Venezuela
+caudatum,E.Mex,#a8ffaa,caud.,0,,,W.Col,#66ff00,West of Colombia
+ciliatum,E.Mex,#a8ffaa,cili.,0,,,CR,#501644,Costa Rica
+costaricanum,CR,#501644,cost.,0,,,S.Col/N.Ecu,#de87cd,South Columbia and North of Ecuador
+dentatum,out,#a09999,dent.,0,,,Jam,#ffd42a,Jamaica
+discolor,Chiapas/CA,#d35f5f,disc.,1,,,E.Mex,#a8ffaa,East of Mexico
+disjunctum,Chiapas/CA,#d35f5f,disj.,1,,,Oaxaca,#87cdde,Oaxaca
+dumatorum,S.Peru/Bol,#d4ff2a,duma.,0,,,out,#a09999,Outgroup (Dentatum)
+elatum,out,#a09999,elat.,0,,,S.Ecu/N.Peru,#ff6600,South of Ecuador and North of Peru
+fuscum,Oaxaca,#87cdde,fusc.,0,,,,,
+hallii,S.Col/N.Ecu,#de87cd,hall.,0,,,,,
+hartwegii,Chiapas/CA,#d35f5f,hart.,0,,,,,
+hirsutum,E.Mex,#a8ffaa,hirs.,0,,,,,
+jamesonii,S.Col/N.Ecu,#de87cd,jame.,1,,,,,
+jucundum,Chiapas/CA,#d35f5f,jucu.,1,,,,,
+lasiophyllum,E.Col/Ven,#5555ff,lasi.,1,,,,,
+lautum,Chiapas/CA,#d35f5f,laut.,0,,,,,
+loeseneri,W.Mex,#00966D,loes.,1,,,,,
+membranaceum,Oaxaca,#87cdde,memb.,0,,,,,
+microcarpum,E.Mex,#a8ffaa,microc.,1,,,,,
+microphyllum,Oaxaca,#87cdde,microp.,0,,,,,
+new_sp_1,Oaxaca,#87cdde,new1.,1,,,,,
+new_sp_2,Oaxaca,#87cdde,new2.,0,,,,,
+obtusatum,Chiapas/CA,#d35f5f,obtu.,0,,,,,
+pichinchense,S.Col/N.Ecu,#de87cd,pich.,1,,,,,
+reticulatum,S.Ecu/N.Peru,#ff6600,reti.,1,,,,,
+seemenii,S.Peru/Bol,#d4ff2a,seem.,0,,,,,
+stellato-tomentosum,CR,#501644,stel.,1,,,,,
+stenocalyx,W.Mex,#00966D,sten.,0,,,,,
+subsessile,W.Col,#66ff00,subs.,0,,,,,
+sulcatum,Oaxaca,#87cdde,sulc.,1,,,,,
+tiliaefolium,E.Mex,#a8ffaa,tilia.,1,,,,,
+tinoides_1,W.Col,#66ff00,tin1.,0,,,,,
+tinoides_2,E.Col/Ven,#5555ff,tin2.,0,,,,,
+toronis,S.Ecu/N.Peru,#ff6600,tor.,0,,,,,
+triphyllum,E.Col/Ven,#5555ff,tri1.,0,,,,,
+triphyllum_new,S.Ecu/N.Peru,#ff6600,tri2.,0,,,,,
+undulatum,W.Col,#66ff00,undu.,1,,,,,
+villosum,Jam,#ffd42a,vill.,2,,,,,
