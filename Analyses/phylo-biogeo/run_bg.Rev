@@ -1,0 +1,142 @@
+fp       = "./"
+bg_fn    = fp + "oreinotinus_reltime.bg_n12.nex"
+morph_fn = fp + "leaftype.csv"
+phy_fn   = fp + "oreino_reltime.tre"
+out_fn   = fp + "output/out2"
+
+# MCMC
+mni = 1
+mvi = 1
+sample_freq=1
+n_iteration = 1000
+n_burnin    = 200
+
+# taxa
+phy <- readTrees(phy_fn)[1]
+taxa = phy.taxa()
+n_taxa = taxa.size()
+n_branches = 2 * n_taxa - 2
+tree_length <- phy.treeLength()
+
+# morph char
+dat_morph = readCharacterDataDelimited(morph_fn, delimiter=",", type="Standard", stateLabels="DISL", headers=false)
+
+# bg char
+dat_range_01 = readDiscreteCharacterData(bg_fn)
+n_areas <- dat_range_01.nchar()
+
+# determine the number of states
+max_areas <- 2
+n_states <- 0
+for (k in 0:max_areas) n_states += choose(n_areas, k)
+
+# convert binary ranges into NaturalNumbers
+dat_range_n = formatDiscreteCharacterData(dat_range_01, "DEC", n_states)
+state_desc = dat_range_n.getStateDescriptions()
+
+# write the state descriptions to file
+state_desc_str = "state,range\n"
+for (i in 1:state_desc.size())
+{
+    state_desc_str += (i-1) + "," + state_desc[i] + "\n"
+}
+write(state_desc_str, file=out_fn+".state_labels.txt")
+
+# morph
+prior_n_events <- 10 / tree_length
+#r_morph ~ dnExp( 1. / prior_n_events )
+r_morph ~ dnExp(10)
+
+pi_morph <- simplex( [1,1,1,1] )
+Q_morph <- fnJC(4)
+m_morph ~ dnPhyloCTMC( Q=Q_morph,
+                       tree=phy,
+                       branchRates=r_morph,
+                       nSites=1,
+                       rootFrequencies=pi_morph,
+                       type="Standard" )
+m_morph.clamp(dat_morph)
+
+moves[mvi++] = mvScale(r_morph, weight=3)
+
+monitors[mni++] = mnJointConditionalAncestralState(tree=phy,
+                                                       ctmc=m_morph,
+                                                       type="Standard",
+                                                       withTips=true,
+                                                       filename=out_fn+".morph.states.log",
+                                                       printgen=sample_freq)
+monitors[mni++] = mnStochasticCharacterMap(ctmc=m_morph, filename=out_fn+".morph.stoch.log", printgen=sample_freq)
+
+# model
+rate_bg <- 1.0
+dispersal_rate ~ dnExp(10)
+dispersal_rate.setValue(0.001)
+extirpation_rate ~ dnExp(10)
+extirpation_rate.setValue(0.001)
+
+for (i in 1:n_areas) {
+  for (j in 1:n_areas) {
+    if (i == j) {
+        dr[i][j] := abs(0)
+    } else {
+        dr[i][j] := dispersal_rate
+    }
+    er[i][j] <- abs(0)
+  }
+  er[i][i] := extirpation_rate
+}
+
+Q_DEC := fnDECRateMatrix(dispersalRates=dr,
+                         extirpationRates=er,
+                         maxRangeSize=max_areas,
+                         nullRange="CondSurv")
+
+clado_event_types <- [ "s", "a" ]
+p_sympatry ~ dnUniform(0,1)
+p_allopatry := abs(1.0 - p_sympatry)
+clado_event_probs := simplex(p_sympatry, p_allopatry)
+P_DEC := fnDECCladoProbs(eventProbs=clado_event_probs,
+                         eventTypes=clado_event_types,
+                         numCharacters=n_areas,
+                         maxRangeSize=max_areas)
+
+# root frequencies
+rf_DEC_raw            <- rep(1, n_states)
+rf_DEC_raw[1]         <- 0.
+rf_DEC                <- simplex(rf_DEC_raw)
+
+
+# the phylogenetic CTMC with cladogenetic events
+m_bg ~ dnPhyloCTMCClado(tree=phy,
+                           Q=Q_DEC,
+                           cladoProbs=P_DEC,
+                           branchRates=rate_bg,
+                           rootFrequencies=rf_DEC,
+                           type="NaturalNumbers",
+                           nSites=1)
+
+# attach the range data
+m_bg.clamp(dat_range_n)
+
+moves[mvi++] = mvScale(dispersal_rate, weight=4)
+moves[mvi++] = mvScale(extirpation_rate, weight=4)
+moves[mvi++] = mvSlide(p_sympatry, delta=1, weight=2)
+
+monitors[mni++] = mnStochasticCharacterMap(ctmc=m_bg, filename=out_fn+".bg.stoch.log", printgen=sample_freq)
+monitors[mni++] = mnJointConditionalAncestralState(tree=phy,
+                                                       ctmc=m_bg,
+                                                       type="NaturalNumbers",
+                                                       withTips=true,
+                                                       withStartStates=true,
+                                                       filename=out_fn+".bg.states.log",
+                                                       printgen=sample_freq)
+
+monitors[mni++] = mnScreen(printgen=1, r_morph)
+monitors[mni++] = mnModel(file=out_fn+".model.log", printgen=sample_freq)
+monitors[mni++] = mnStochasticVariable(filename=out_fn + ".posterior.log",printgen=10)
+#monitors[mni++] = mnFile(phy, filename=out_fn+".tre", printgen=sample_freq)
+
+mdl = model(phy)
+ch = mcmc(moves, monitors, mdl)
+ch.burnin(n_burnin, tuningInterval=20)
+ch.run(n_iteration)

@@ -1,0 +1,71 @@
+#NEXUS
+
+BEGIN DATA;
+DIMENSIONS NTAX=46 NCHAR=12;
+FORMAT DATATYPE=STANDARD LABELS=01 GAP=- MISSING=?;
+MATRIX
+
+  [ REGION LABELS ]
+  [ 1  : Eastern North America ]
+  [ 2  : Eastern and Central Mexico (+Huatla, Oaxaca) ]
+  [ 2a : Western Mexico ]
+  [ 3  : Oaxaca ]
+  [ 4  : Chiapas (+El Salvador, Guatemala, Honduras, Nicaragua) ]
+  [ 5  : Jamaica (+Cuba) ]
+  [ 6  : Costa Rica and Panama ]
+  [ 7  : Western Colombia ]
+  [ 8  : Eastern Columbia (+Venezuela) ]
+  [ 9  : Southern Colombia and Northern Ecuador ]
+  [ 10 : Southern Ecuador and Northern/Central Peru ]
+  [ 11 : Southern Peru and Bolivia (+Argentina) ]
+
+  elatum                        100000000000
+  dentatum                      100000000000
+  loeseneri                     001000000000 [ changed to wMX only ]
+  stenocalyx                    001000000000 [ changed to wMX only ]
+  tiliaefolium                  010000000000
+  microcarpum                   010000000000
+  caudatum                      010000000000
+  ciliatum                      010000000000
+  new_sp_huatla                 010000000000
+  hirsutum                      010000000000 [ changed to from eMX to eMX+Oax; 210820 changes back to eMx ]
+  cf_stenocalyx_shortPetiole    010000000000
+  sulcatum                      000100000000
+  fuscum                        000100000000
+  microphyllum                  001100000000 [ changed to wMX+Oax ]
+  newsp.2                       000100000000
+  membranaceum                  000100000000
+  newsp.1                       000100000000
+  acutifolium                   000100000000
+  stellato-tomentosum           000000100000
+  villosum                      000001000000
+  alpinum                       000001000000
+  arboreum                      000001000000
+  discolor                      000010000000
+  disjunctum                    000010000000
+  blandum                       000010000000
+  lautum                        000010000000
+  jucundum                      000010000000
+  obtusatum                     010010000000 [ changed to eMX+Chia ]
+  hartwegii                     000010000000
+  costaricanum                  000000100000
+  tinoides_1                    000000010000
+  subsessile                    000000010000
+  undulatum                     000000010000
+  tinoides_2                    000000001000
+  triphyllum                    000000001000
+  lasiophyllum                  000000001000
+  jamesonii                     000000000100
+  hallii                        000000000100
+  pichinchense                  000000000100
+  toronis                       000000000110
+  seemenii                      000000000001
+  dumatorum                     000000000001
+  divaricatum                   000000000010
+  triphyllum_new                000000000010
+  ayavacense                    000000000010
+  reticulatum                   000000000010
+  ;
+
+END;
+

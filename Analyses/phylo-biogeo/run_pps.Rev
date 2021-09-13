@@ -1,0 +1,18 @@
+fp = "./" #/Users/mlandis/projects/bg_oreinotinus/"
+bg_fn = fp + "oreinotinus_reltime.bg_n12.nex"
+morph_fn = fp + "leaftype.csv"
+phy_fn = fp + "oreino_reltime.tre"
+
+# Load model
+source("model.Rev")
+
+# "Reading Trace"
+trace = readStochasticVariableTrace(fp+"output/out.posterior.log", delimiter=TAB)
+
+# "Creating Posterior Predictive Simulation"
+pps = posteriorPredictiveSimulation(mdl, directory=fp+"output/pps/", trace)
+
+# "Running the posterior predictive simulation"
+pps.run(thinning=1)
+
+quit()

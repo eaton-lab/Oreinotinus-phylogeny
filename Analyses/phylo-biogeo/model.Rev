@@ -1,0 +1,92 @@
+# MCMC
+mvi = 1
+
+# taxa
+phy <- readTrees(phy_fn)[1]
+taxa = phy.taxa()
+n_taxa = taxa.size()
+n_branches = 2 * n_taxa - 2
+tree_length <- phy.treeLength()
+
+# morph char
+dat_morph = readCharacterDataDelimited(morph_fn, delimiter=",", type="Standard", stateLabels="DISL", headers=false)
+
+# bg char
+dat_range_01 = readDiscreteCharacterData(bg_fn)
+n_areas <- dat_range_01.nchar()
+
+# determine the number of states
+max_areas <- 2
+n_states <- 0
+for (k in 0:max_areas) n_states += choose(n_areas, k)
+
+# convert binary ranges into NaturalNumbers
+dat_range_n = formatDiscreteCharacterData(dat_range_01, "DEC", n_states)
+
+# morph
+#r_morph ~ dnExp( 1. ) # prior_n_events )S
+r_morph ~ dnExp( 10 )
+
+pi_morph <- simplex( [1,1,1,1] )
+Q_morph <- fnJC(4)
+m_morph ~ dnPhyloCTMC( Q=Q_morph,
+                       tree=phy,
+                       branchRates=r_morph,
+                       nSites=1,
+                       rootFrequencies=pi_morph,
+                       type="Standard" )
+m_morph.clamp(dat_morph)
+
+#moves[mvi++] = mvSimplex(pi_morph, weight=2)
+
+# model
+rate_bg <- 1.0
+dispersal_rate ~ dnExp(10)
+#dispersal_rate ~ dnExp(1)
+dispersal_rate.setValue(0.001)
+extirpation_rate ~ dnExp(10)
+#extirpation_rate ~ dnExp(1)
+extirpation_rate.setValue(0.001)
+
+for (i in 1:n_areas) {
+  for (j in 1:n_areas) {
+      dr[i][j] := dispersal_rate
+      er[i][j] <- abs(0)
+  }
+  er[i][i] := extirpation_rate
+}
+
+Q_DEC := fnDECRateMatrix(dispersalRates=dr,
+                         extirpationRates=er,
+                         maxRangeSize=max_areas,
+                         nullRange="Include")
+
+clado_event_types <- [ "s", "a" ]
+p_sympatry ~ dnUniform(0,1)
+p_allopatry := abs(1.0 - p_sympatry)
+clado_event_probs := simplex(p_sympatry, p_allopatry)
+P_DEC := fnDECCladoProbs(eventProbs=clado_event_probs,
+                         eventTypes=clado_event_types,
+                         numCharacters=n_areas,
+                         maxRangeSize=max_areas)
+
+# root frequencies
+rf_DEC_raw            <- rep(1, n_states)
+rf_DEC_raw[1]         <- 0.
+rf_DEC                <- simplex(rf_DEC_raw)
+
+
+# the phylogenetic CTMC with cladogenetic events
+m_bg ~ dnPhyloCTMCClado(tree=phy,
+                           Q=Q_DEC,
+                           cladoProbs=P_DEC,
+                           branchRates=rate_bg,
+                           rootFrequencies=rf_DEC,
+                           type="NaturalNumbers",
+                           nSites=1)
+
+# attach the range data
+m_bg.clamp(dat_range_n)
+
+
+mdl = model(phy)
