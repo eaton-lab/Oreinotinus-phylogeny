@@ -6,7 +6,6 @@ phy <- readTrees(phy_fn)[1]
 taxa = phy.taxa()
 n_taxa = taxa.size()
 n_branches = 2 * n_taxa - 2
-tree_length <- phy.treeLength()
 
 # morph char
 dat_morph = readCharacterDataDelimited(morph_fn, delimiter=",", type="Standard", stateLabels="DISL", headers=false)
@@ -24,9 +23,7 @@ for (k in 0:max_areas) n_states += choose(n_areas, k)
 dat_range_n = formatDiscreteCharacterData(dat_range_01, "DEC", n_states)
 
 # morph
-#r_morph ~ dnExp( 1. ) # prior_n_events )S
 r_morph ~ dnExp( 10 )
-
 pi_morph <- simplex( [1,1,1,1] )
 Q_morph <- fnJC(4)
 m_morph ~ dnPhyloCTMC( Q=Q_morph,
@@ -37,15 +34,11 @@ m_morph ~ dnPhyloCTMC( Q=Q_morph,
                        type="Standard" )
 m_morph.clamp(dat_morph)
 
-#moves[mvi++] = mvSimplex(pi_morph, weight=2)
-
 # model
 rate_bg <- 1.0
 dispersal_rate ~ dnExp(10)
-#dispersal_rate ~ dnExp(1)
 dispersal_rate.setValue(0.001)
 extirpation_rate ~ dnExp(10)
-#extirpation_rate ~ dnExp(1)
 extirpation_rate.setValue(0.001)
 
 for (i in 1:n_areas) {
