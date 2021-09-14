@@ -3,7 +3,7 @@ This folder contains all the raw data used in the analyses.
 - `oreinotinus_samples_database.csv` Raw database for samples of Oreinotinus (and outgroups), used in the analyses of the paper related with this repository.
 - `oreinotinus_color_codes.csv` CSV files that contains all the colors and regions used.
 
-Due to file size limitation, sequence and SNPs files used in multiple analyses may be found in Zenodo in the following project: 
+Due to file size limitation, sequence, SNPs, and morphological matrices used in multiple analyses may be found in Zenodo in the following project: 
 https://www.doi.org/10.5281/zenodo.5504439
 
 
@@ -15,3 +15,4 @@ The full list of files is:
 - `full_dataset.snps.hdf5` SNPs formated as HDF5 file
 - `full_dataset.snpsmap` Information about location (locus) of SNPs 
 - `full_dataset_stats.txt` Statistics about the assembly
+- `leaf_traits_measurements.tsv` TSV file that contains leaf measurments used in the discriminant analyses.
