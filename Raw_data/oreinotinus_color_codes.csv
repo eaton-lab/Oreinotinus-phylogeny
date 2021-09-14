@@ -9,7 +9,7 @@ costaricanum,CR,#501644,cost.,0,,,S.Col/N.Ecu,#de87cd,South Columbia and North o
 dentatum,out,#a09999,dent.,0,,,Jam,#ffd42a,Jamaica
 discolor,Chiapas/CA,#d35f5f,disc.,1,,,E.Mex,#a8ffaa,East of Mexico
 disjunctum,Chiapas/CA,#d35f5f,disj.,1,,,Oaxaca,#87cdde,Oaxaca
-dumatorum,S.Peru/Bol,#d4ff2a,duma.,0,,,out,#a09999,Outgroup (Dentatum)
+new_name_2,S.Peru/Bol,#d4ff2a,nn2,0,,,out,#a09999,Outgroup (Dentatum)
 elatum,out,#a09999,elat.,0,,,S.Ecu/N.Peru,#ff6600,South of Ecuador and North of Peru
 fuscum,Oaxaca,#87cdde,fusc.,0,,,,,
 hallii,S.Col/N.Ecu,#de87cd,hall.,0,,,,,
@@ -38,6 +38,6 @@ tinoides_1,W.Col,#66ff00,tin1.,0,,,,,
 tinoides_2,E.Col/Ven,#5555ff,tin2.,0,,,,,
 toronis,S.Ecu/N.Peru,#ff6600,tor.,0,,,,,
 triphyllum,E.Col/Ven,#5555ff,tri1.,0,,,,,
-triphyllum_new,S.Ecu/N.Peru,#ff6600,tri2.,0,,,,,
+new_name_1,S.Ecu/N.Peru,#ff6600,nn1,0,,,,,
 undulatum,W.Col,#66ff00,undu.,1,,,,,
 villosum,Jam,#ffd42a,vill.,2,,,,,
