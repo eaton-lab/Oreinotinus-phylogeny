@@ -1,3 +1,5 @@
+This folder contains all scripts and paremeters for running the Network analysis.
+
 The scripts in this analysis are in three different files:
 
 - `1_Reconstruct_trees_treeslider.ipynb`
