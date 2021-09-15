@@ -42,7 +42,7 @@ fp       = "./"
 param_fn = paste0(fp, "output/out.model.log")
 phy_fn   = paste0(fp, "oreino_reltime.tre")
 sim_fp   = paste0(fp, "output/pps/")
-plot_fn  = paste0(fp, "sm_fig11_PPS_regional_leaftypes.pdf")
+plot_fn  = paste0(fp, "supp_fig_11_pps_regional_leaftypes.pdf")
 
 # read files
 dat      = read.csv(param_fn, sep="\t", header=T)

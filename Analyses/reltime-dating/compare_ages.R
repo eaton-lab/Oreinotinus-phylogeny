@@ -4,7 +4,7 @@ library(phytools)
 fp = "./"
 fn1 = paste0(fp, "oreino_reltime.tre")
 fn2 = paste0(fp, "oreino_landis2021.mcc.tre")
-plot_fn = paste0(fp, "./sm_fig4_reltime_age_comparison.pdf")
+plot_fn = paste0(fp, "./supp_fig_3_reltime_age_comparison.pdf")
 phy1 = read.tree(fn1)
 phy2 = read.beast(fn2)
 
