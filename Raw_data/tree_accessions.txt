@@ -1,0 +1,41 @@
+gbifID	species	decimalLatitude	decimalLongitude	coordinateUncertaintyInMeters	elevation	year	institutionCode	collectionCode	catalogNumber	recordNumber	recordedBy
+NA	acutifolium	17.5634	-96.514372	0	2770	NA	Yale Peabody Museum	YU.101634	6963	3059	Patrick W. Sweeney
+NA	alpinum	18.1971	-77.39187	0	765	NA	Yale Peabody Museum	YU.254797	7065	3924	Patrick W. Sweeney
+2273126902	ayavacense	-4.65169	-79.73619	NA	2060	2019	Yale Peabody Museum	YU.254897	NA	4006	"Patrick Sweeney, Michael Donoghue, Erika Edwards, Malu Ore"
+1146731514	blandum	16.819088	-92.580442	NA	2890	2015	Yale Peabody Museum	YU.101662	NA	3088	"Sweeney, P. W., Michael Donoghue, Deren Eaton, Ivalu Cacho"
+NA	caudatum	20.2747	-98.17722	0	1590	NA	Yale Peabody Museum	YU.254422	7017	3211	Patrick W. Sweeney
+NA	ciliatum	20.2426	-98.20852	0	2060	NA	Yale Peabody Museum	YU.254431	7025	3220	Patrick W. Sweeney
+NA	costaricanum	10.275	-84.8255	NA	NA	NA	Yale Peabody Museum	YU	MJD_85	85	Michael J. Donoghue
+NA	discolor	15.359067	-92.327433	NA	NA	NA	Yale Peabody Museum	NA	Edwards_629	NA	Erika J. Edwards
+NA	disjunctum	16.108333	-91.676111	NA	NA	NA	Yale Peabody Museum	YU	EJE_615	615	Erika J. Edwards
+NA	newname2	-18.12189	-63.65009	NA	1108	NA	Yale Peabody Museum	YU.254765	6856	3895	Patrick W. Sweeney
+NA	fuscum	17.259	-96.04	NA	NA	NA	Yale Peabody Museum	YU	EJE_604	NA	Erika J. Edwards
+NA	hallii	0.16818	-78.29393	NA	3394	NA	Yale Peabody Museum	YU.100393	142	1830	Patrick W. Sweeney
+NA	hartwegii	16.807	-92.32196	0	1815	NA	Yale Peabody Museum	YU.254692	6992	3186	Patrick W. Sweeney
+NA	hirsutum	19.5204	-97.05492	0	2445	NA	Yale Peabody Museum	YU.254417	7012	3206	Patrick W. Sweeney
+1039015398	jamesonii	0.72817	-77.72449	NA	3000	2009	Yale Peabody Museum	YU.100430	NA	1636	Patrick W. Sweeney
+NA	jucundum	16.75	-92.68	NA	NA	NA	Yale Peabody Museum	YU	MKM_20	20	Morgan K. Moeglein
+1805432769	lasiophyllum	4.53727	-74.30421	250	2750	2012	Yale Peabody Museum	YU.100487	NA	2174	Patrick W. Sweeney
+1146738226	lautum	16.51086	-92.477905	NA	1795	2015	Yale Peabody Museum	YU	NA	3106	"Sweeney, P. W., Michael Donoghue, Deren Eaton, Ivalu Cacho"
+NA	loeseneri	19.009	-100.077	NA	NA	NA	Yale Peabody Museum	YU	MJD_75	75	Michael J. Donoghue
+NA	membranaceum	17.5854	-96.517424	NA	NA	NA	Yale Peabody Museum	YU	EJE_606	606	Erika J. Edwards
+NA	microcarpum	19.6214	-97.05567	0	2230	NA	Yale Peabody Museum	YU.254413	7008	3202	Patrick W. Sweeney
+NA	microphylum	19.614	-101.126	NA	NA	NA	Yale Peabody Museum	YU	DE_002	2	Deren Eaton
+NA	newsp1	17.585383	-96.505483	NA	NA	NA	Yale Peabody Museum	YU	sulcatum_D9_MEX_003	NA	Michael J. Donoghue
+1146731523	newsp2	17.589054	-96.494185	NA	2500	2015	Yale Peabody Museum	YU.101633	NA	3058	"Sweeney, P. W., Michael Donoghue, Erika Edwards, Deren Eaton, Mark Olson"
+NA	obtusatum	16.8099	-92.582221	0	2815	NA	Yale Peabody Museum	YU.101674	6983	3100	Patrick W. Sweeney
+NA	pichinchense	-0.25898	-78.82685	NA	2182	NA	Yale Peabody Museum	YU.100372	121	1669	Patrick W. Sweeney
+NA	reticulatum	-3.99242	-79.11198	NA	2408	NA	Yale Peabody Museum	YU.100323	72	1706	Patrick W. Sweeney
+NA	seemenii	-16.261	-67.78667	NA	2200	NA	Yale Peabody Museum	YU.254754	6845	3884	Patrick W. Sweeney
+NA	stellato-tomentosum	8.78	-82.63	NA	NA	NA	Yale Peabody Museum	YU	MJD_83	83	Michael J. Donoghue
+1288041328	stenocalyx	19.27118	-99.28402	NA	2820	2016	Yale Peabody Museum	YU.254446	NA	3234	"Sweeney, P. W., Michael Donoghue, Deren Eaton, Erika Edwards, Mark Olson, Morgan Moeglein"
+1805437746	subsessile	6.27569	-75.50035	4	2425	2012	Yale Peabody Museum	YU.100484	NA	2171	Patrick W. Sweeney
+NA	sulcatum	16.994883	-96.102883	NA	NA	NA	Yale Peabody Museum	YU	MJD_001_cpelon_1117	NA	Michael J. Donoghue
+NA	tilaefolium	20.2426	-98.20852	0	2060	NA	Yale Peabody Museum	YU.254434	7027	3222	Patrick W. Sweeney
+1805433841	tinoides_1	5.03155	-74.5527	3	1750	2012	Yale Peabody Museum	YU	NA	2151	Patrick W. Sweeney
+1805426047	tinoides_2	4.6538	-74.36136	4	1711	2012	Yale Peabody Museum	YU	NA	2177	Patrick W. Sweeney
+1038936666	toronis	-1.40796	-78.25745	NA	1416	2009	Yale Peabody Museum	YU	NA	1799	Patrick W. Sweeney
+1805443572	triphyllum	4.56304	-73.95703	2	2812	2012	Yale Peabody Museum	YU	NA	2180	Patrick W. Sweeney
+NA	newname1	-3.58931	-79.18901	NA	2816	NA	Yale Peabody Museum	YU	PWS_1783	1783	Patrick W. Sweeney
+1805438571	undulatum	6.23878	-75.50165	5	2600	2012	Yale Peabody Museum	YU.100486	NA	2173	Patrick W. Sweeney
+NA	villosum	18.2073	-77.11038	0	550	NA	Yale Peabody Museum	YU.254791	7059	3918	Patrick W. Sweeney
