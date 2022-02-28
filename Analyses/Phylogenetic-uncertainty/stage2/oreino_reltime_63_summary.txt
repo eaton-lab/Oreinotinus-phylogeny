@@ -1,0 +1,45 @@
+;   MEGA-CC (Molecular Evolutionary Genetics Analysis Compute Core)
+;
+;   Suggested Citation for MEGA-CC 11:
+;
+;   Tamura K, Stecher G, and Kumar S.
+;   MEGA11: Molecular Evolutionary Genetics Analysis version 11.
+;   Molecular Biology and Evolution (2021) 38:3022-3027
+;
+;   Kumar S, Stecher G, Peterson D, and Tamura K
+;   MEGA-CC: Computing Core of Molecular Evolutionary Genetics Analysis Program for Automated and Iterative Data Analysis
+;   Bioinformatics (2012) 28:2685-2686 (Epub 2012 Aug 24)
+
+[Application Info]
+
+	Version                                 = 11.0.11
+	Build                                   = 11220201-x86_64
+	User Interface                          = CommandLine
+	Operating System                        = mac
+
+[General Info]
+
+	Data Type                               = Newick tree
+	No. of Taxa                             =       42
+	Data File                               = 'stage1/oreino_63.tre'
+	Settings File                           = './reltime_blens.mao'
+	Command Line                            = megacc -a reltime_blens.mao -t stage1/oreino_63.tre -g outgroup.txt -o stage2/oreino_reltime_63.tre
+
+[Analysis Settings]
+
+	Analysis                                = Estimate Divergence Times (Branch Lengths)
+	Tree to Use                             = Use tree from file
+	Max Relative Rate Ratio                 = 20
+	Has Time Limit                          = False
+	Maximum Execution Time                  = -1
+	datatype                                = snTree
+
+[Analysis Statistics]
+
+	Start Time                              = 28-2-22 14:10:38
+	End Time                                = 28-2-22 14:10:38
+	Execution Time                          =    0.007 (seconds)
+	Max Heap Memory Used                    = 7.536 (MB)
+	Sum of branch lengths                   =    0.138
+	CorrTest Score                          = 9.97E-001
+	CorrTest P-value                        = p-value < 0.001

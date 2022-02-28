@@ -1,0 +1,4 @@
+score   :  0.99449742
+p-value :  p-value < 0.001
+
+;; Detailed information about the CorrTest method, interpretation of results, and source code can be found at https://github.com/cathyqqtao/CorrTest
